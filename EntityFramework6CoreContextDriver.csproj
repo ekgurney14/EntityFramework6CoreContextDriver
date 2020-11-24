@@ -8,9 +8,9 @@
 		<Authors>Eric Gurney</Authors>
 		<PackageTags>linqpaddriver</PackageTags>
 		<PackageDescription>Entity Framework 6 Core Driver for LINQPad</PackageDescription>
-		<Version>1.0.0</Version>
-		<FileVersion>1.1.0.0</FileVersion>
-		<AssemblyVersion>1.1.0.0</AssemblyVersion>
+		<Version>1.1.0</Version>
+		<FileVersion>1.1.0.1</FileVersion>
+		<AssemblyVersion>1.1.0.1</AssemblyVersion>
         <RepositoryUrl>https://github.com/ekgurney14/EntityFramework6CoreContextDriver</RepositoryUrl>
   </PropertyGroup>
 
