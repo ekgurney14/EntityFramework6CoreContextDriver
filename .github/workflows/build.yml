@@ -30,4 +30,4 @@ jobs:
         run: dotnet build EntityFramework6CoreContextDriver.sln
       # push to nuget
       - name: dotnet nuget push
-        run: dotnet nuget push "bin/Release/EntityFramework6Driver.1.0.0.nupkg" --source "github"
+        run: dotnet nuget push "bin/Release/EntityFramework6CoreContextDriver.1.0.0.nupkg" --source "github"
