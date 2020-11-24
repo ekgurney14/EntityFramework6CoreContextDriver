@@ -4,7 +4,6 @@
 		<TargetFramework>netcoreapp3.1</TargetFramework>
 		<UseWpf>true</UseWpf>
 		<AssemblyName>EntityFramework6CoreContextDriver</AssemblyName>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageId>EntityFramework6CoreContextDriver</PackageId>
 		<Authors>Eric Gurney</Authors>
 		<PackageTags>linqpaddriver</PackageTags>
