@@ -27,7 +27,7 @@ jobs:
         
       #
       - name: dotnet restore
-        run: dotnet restore -v d
+        run: dotnet restore
       # Runs a set of commands using the runners shell
       - name: dotnet build
         run: dotnet build EntityFramework6CoreContextDriver.sln
