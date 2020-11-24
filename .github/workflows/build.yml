@@ -28,6 +28,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: dotnet build
         run: dotnet build EntityFramework6CoreContextDriver.sln
+      # dot net pack
+      - name: dotnet pack
+        run: dotnet pack --configuration Release
+        
       # push to nuget
       - name: dotnet nuget push
         run: dotnet nuget push "bin/Release/EntityFramework6CoreContextDriver.1.0.0.nupkg" --source "github"
