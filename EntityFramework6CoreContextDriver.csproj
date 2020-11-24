@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-		<TargetFramework>netcoreapp3.0</TargetFramework>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
 		<UseWpf>true</UseWpf>
 		<AssemblyName>EntityFramework6Driver</AssemblyName>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -11,7 +11,7 @@
 		<AssemblyVersion>1.1.0.0</AssemblyVersion>
   </PropertyGroup>
 
-	<PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp3.0'">
+	<PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
 		<DefineConstants>NETCORE</DefineConstants>
 	</PropertyGroup>
 
@@ -32,7 +32,7 @@
     <Folder Include="Properties\" />
   </ItemGroup>
 
-	<Target Name="PostBuild1" AfterTargets="PostBuildEvent" Condition="'$(TargetFramework)' == 'netcoreapp3.0'">
+	<Target Name="PostBuild1" AfterTargets="PostBuildEvent" Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
 		<Exec Command="xcopy /i/y/s &quot;$(TargetDir)*.*&quot; &quot;%25LocalAppData%25\LINQPad\Drivers\DataContext\NetCore\$(TargetName)&quot;" />
 	</Target>
 
