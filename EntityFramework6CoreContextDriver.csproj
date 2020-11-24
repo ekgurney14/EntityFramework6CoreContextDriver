@@ -3,9 +3,12 @@
   <PropertyGroup>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
 		<UseWpf>true</UseWpf>
-		<AssemblyName>EntityFramework6Driver</AssemblyName>
+		<AssemblyName>EntityFramework6CoreContextDriver</AssemblyName>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageId>EntityFramework6CoreContextDriver</PackageId>
+		<Authors>Eric Gurney</Authors>
 		<PackageTags>linqpaddriver</PackageTags>
+		<PackageDescription>Entity Framework 6 Core Driver for LINQPad</PackageDescription>
 		<Version>1.0.0</Version>
 		<FileVersion>1.1.0.0</FileVersion>
 		<AssemblyVersion>1.1.0.0</AssemblyVersion>
