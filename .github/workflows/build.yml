@@ -31,8 +31,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: dotnet build --no-restore
         run: dotnet build EntityFramework6CoreContextDriver.sln
-      - name: Publish FluentEmail.Core
-        uses: brandedoutcast/publish-nuget@v2.5.2
+      - name: Publish NuGet
+        uses: brandedoutcast/publish-nuget@v2.5.5
         with:
           PROJECT_FILE_PATH: src/EntityFramework6CoreContextDriver.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
