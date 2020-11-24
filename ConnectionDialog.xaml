@@ -1,0 +1,98 @@
+﻿<Window x:Class="EntityFramework6CoreContextDriver.ConnectionDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Universal Demo Connection"
+        Background="{x:Static SystemColors.ControlBrush}"
+        SizeToContent="Height"
+        Width="500"
+        WindowStartupLocation="CenterScreen"
+        d:DataContext="{d:DesignInstance dataContextDriverDemo:ConnectionDialog}">
+    <StackPanel Margin="12">
+
+        <DockPanel>
+            <Label DockPanel.Dock="Right"
+                   Padding="1">
+                <Hyperlink Click="BrowseAssembly">Browse...</Hyperlink>
+            </Label>
+            <Label Padding="0,0,0,1">Path to custom assembly:</Label>
+        </DockPanel>
+
+        <TextBox Name="AssemblyPath"
+                 Padding="2"
+                 Margin="0,1,0,9"
+                 Text="{Binding CustomTypeInfo.CustomAssemblyPath}" />
+
+
+        <DockPanel>
+            <Label DockPanel.Dock="Right"
+                   Padding="1">
+                <Hyperlink Click="ChooseType">Choose...</Hyperlink>
+            </Label>
+            <Label Padding="0,0,0,1">Full name of custom type:</Label>
+        </DockPanel>
+
+        <TextBox Name="TypeName"
+                 Padding="2"
+                 Margin="0,1,0,9"
+                 Text="{Binding CustomTypeInfo.CustomTypeName}" />
+
+        <DockPanel>
+            <Label DockPanel.Dock="Right"
+                   Padding="1">
+            </Label>
+            <Label Padding="0,0,0,1">Server Name:</Label>
+        </DockPanel>
+
+        <TextBox Name="ServerName"
+                 Padding="2"
+                 Margin="0,1,0,9"
+                 Text="{Binding DatabaseInfo.Server}" />
+
+        <DockPanel>
+            <Label DockPanel.Dock="Right"
+                   Padding="1">
+            </Label>
+            <Label Padding="0,0,0,1">Database Name:</Label>
+        </DockPanel>
+
+        <TextBox Name="DatabaseName"
+                 Padding="2"
+                 Margin="0,1,0,9"
+                 Text="{Binding DatabaseInfo.Database}" />
+
+        <DockPanel />
+
+
+        <Label Padding="0,0,0,2">Friendly name for this connection (optional):</Label>
+        <TextBox Name="FriendlyName"
+                 Padding="2"
+                 Text="{Binding DisplayName}" />
+
+        <DockPanel LastChildFill="False"
+                   Margin="0,15,0,0">
+            <CheckBox IsChecked="{Binding Persist}"
+                      VerticalAlignment="Center">Remember this connection</CheckBox>
+            <Button Name="Cancel"
+                    DockPanel.Dock="Right"
+                    Content="Cancel"
+                    Margin="6,0,0,0"
+                    Padding="10,3"
+                    MinWidth="60"
+                    IsCancel="True"
+                    TabIndex="2" />
+            <Button Name="Ok"
+                    DockPanel.Dock="Right"
+                    Content="OK"
+                    Margin="6,0,0,0"
+                    Padding="10,3"
+                    MinWidth="60"
+                    IsDefault="True"
+                    TabIndex="1"
+                    Click="btnOK_Click" />
+        </DockPanel>
+
+    </StackPanel>
+</Window>
